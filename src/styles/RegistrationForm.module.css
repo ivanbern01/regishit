@@ -1,0 +1,114 @@
+/* Main Container */
+.container {
+  max-width: 900px; /* Increased from 700px */
+  margin: 50px auto;
+  padding: 40px; /* Increased padding */
+  background: linear-gradient(135deg, #ffffff, #f7f9fc);
+  border-radius: 20px; /* Slightly larger radius for a smoother effect */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  font-family: "Arial", sans-serif;
+}
+
+/* Form Title */
+.formTitle {
+  text-align: center;
+  font-size: 30px; /* Increased font size */
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 30px; /* More spacing below title */
+}
+
+/* Form Structure */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased spacing between fields */
+}
+
+/* Form Field */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Increased spacing for clarity */
+}
+
+.field label {
+  font-weight: 700;
+  font-size: 16px; /* Slightly larger font size */
+  color: #34495e;
+}
+
+.field select {
+  padding: 15px; /* Larger padding for bigger inputs */
+  font-size: 16px;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease;
+}
+
+.field select:focus {
+  border-color: #1abc9c;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.submitButton {
+  padding: 15px 25px; /* Bigger button size */
+  font-size: 18px; /* Increased font size */
+  border: none;
+  border-radius: 10px;
+  background-color: #1abc9c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #16a085;
+  transform: translateY(-2px);
+}
+
+.cancelButton {
+  padding: 15px 25px; /* Same size as submit button */
+  font-size: 18px;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #7f8c8d;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancelButton:hover {
+  background-color: #f2f3f4;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  .formTitle {
+    font-size: 24px; /* Smaller for mobile */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submitButton,
+  .cancelButton {
+    width: 100%; /* Full width buttons on mobile */
+  }
+}

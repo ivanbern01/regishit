@@ -1,0 +1,120 @@
+.progressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 80%;
+  position: relative;
+  padding: 10px 0;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.stepIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.completed {
+  background-color: #4caf50; /* Green for completed */
+  transform: scale(1.1);
+}
+
+.incomplete {
+  background-color: #cccccc; /* Grey for incomplete */
+}
+
+.stepName {
+  margin-left: 12px;
+  font-size: 16px;
+  color: #333333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.stepName:hover {
+  color: #4caf50;
+}
+
+.stepLine {
+  position: absolute;
+  top: 28px; /* Adjust position of the line */
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #cccccc; /* Default grey line color */
+  z-index: 0;
+  transition: background-color 0.3s ease;
+}
+
+.stepLine:hover {
+  background-color: #4caf50; /* Line color on hover */
+}
+
+/* Change the line color to green for completed steps */
+.step.completed ~ .stepLine {
+  background-color: #4caf50; /* Green line for completed steps */
+}
+
+/* Ensure the line stretches between the icons */
+.step:not(:last-child) .stepLine {
+  right: 50%;  /* The line extends towards the next step */
+}
+
+.step:not(:first-child) .stepLine {
+  left: 50%;  /* The line extends towards the previous step */
+}
+
+/* Adjust the last step line width */
+.step:last-child .stepLine {
+  width: 50%;  /* Make the last line reach the right edge */
+  left: 50%;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .progressHeader {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .step {
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .stepIcon {
+    margin-bottom: 10px;
+  }
+
+  .stepLine {
+    width: 60%;
+    margin: 0 auto;
+    height: 2px;
+    display: block;
+  }
+
+  .stepName {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,121 @@
+/* Container and Form */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Section Headers */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  /* Form Fields */
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .field label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .field input,
+  .field select,
+  .field textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Checkbox Field */
+  .field label input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Textarea */
+  .field textarea {
+    resize: none;
+    min-height: 80px;
+  }
+  
+  /* Line Separator */
+  .line {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .submitButton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton {
+    background-color: #4caf50;
+    color: #ffffff;
+  }
+  
+  .submitButton:hover {
+    background-color: #43a047;
+  }
+  
+  /* New CSS for row layout */
+.row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .field {
+    flex: 1;
+  }
+  
